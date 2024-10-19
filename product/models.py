@@ -9,15 +9,15 @@ class Product(models.Model):
         CHILD = 'Child'
         ADULT = 'Adult'
 
-    descricao = models.CharField(max_length=100, verbose_name='Descrição')
+    description = models.CharField(max_length=100, verbose_name='Description')
     metal = models.TextField(choices=Metal, verbose_name='Metal')
-    codigo_fabrica = models.CharField(max_length=100, verbose_name='Código da Fábrica')
-    data_compra = models.DateField(verbose_name='Data de compra')
-    preco_custo = models.DecimalField(max_digits=10, decimal_places=2, verbose_name='Preço de custo')
-    preco_prazo = models.DecimalField(max_digits=10, decimal_places=2, verbose_name='Preço a vista')
-    preco_vista = models.DecimalField(max_digits=10, decimal_places=2, verbose_name='Preço a prazo')
+    supplier_code = models.CharField(max_length=100, verbose_name='Supplier code')
+    purchase_date = models.DateField(verbose_name='Purchase date')
+    cost_price = models.DecimalField(max_digits=10, decimal_places=2, verbose_name='Cost price')
+    cash_price = models.DecimalField(max_digits=10, decimal_places=2, verbose_name='Cash price')
+    deffered_price = models.DecimalField(max_digits=10, decimal_places=2, verbose_name='Defered price')
 
 
 class Supplier(models.Model):
-    nome = models.CharField(max_length=100, verbose_name='Nome')
+    name = models.CharField(max_length=100, verbose_name='Name')
 
