@@ -1,0 +1,163 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-16 09:28-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: customer/apps.py:8 customer/models.py:20 sale/models.py:19
+msgid "Customer"
+msgstr "Cliente"
+
+#: customer/apps.py:9 customer/models.py:21
+msgid "Customers"
+msgstr "Clientes"
+
+#: customer/models.py:5 product/models.py:6
+msgid "Name"
+msgstr "Nome"
+
+#: customer/models.py:6
+msgid "Birthdate"
+msgstr "Data de nascimento"
+
+#: customer/models.py:13
+msgid "Last purchase"
+msgstr "Última compra"
+
+#: product/apps.py:8 product/apps.py:9 product/models.py:49
+msgid "Products"
+msgstr "Produtos"
+
+#: product/models.py:13 product/models.py:36
+msgid "Supplier"
+msgstr "Fábrica"
+
+#: product/models.py:14
+msgid "Suppliers"
+msgstr "Fábricas"
+
+#: product/models.py:18
+msgid "Gold"
+msgstr "Ouro"
+
+#: product/models.py:19
+msgid "Silver"
+msgstr "Prata"
+
+#: product/models.py:22
+msgid "Child"
+msgstr "Infantil"
+
+#: product/models.py:23
+msgid "Adult"
+msgstr "Adulto"
+
+#: product/models.py:26
+msgid "Earring"
+msgstr "Brinco"
+
+#: product/models.py:27
+msgid "Necklace"
+msgstr "Colar"
+
+#: product/models.py:28
+msgid "Ring"
+msgstr "Anél"
+
+#: product/models.py:29
+msgid "Bracelet"
+msgstr "Bracelete"
+
+#: product/models.py:30
+msgid "Pendant"
+msgstr "Pingente"
+
+#: product/models.py:31
+msgid "Choker"
+msgstr "Gargantilha"
+
+#: product/models.py:33
+msgid "Description"
+msgstr "Descrição"
+
+#: product/models.py:34
+msgid "Metal"
+msgstr "Metal"
+
+#: product/models.py:35
+msgid "Category"
+msgstr "Categoria"
+
+#: product/models.py:37
+msgid "Supplier code"
+msgstr "Código da Fábrica"
+
+#: product/models.py:38
+msgid "Purchase date"
+msgstr "Data da compra"
+
+#: product/models.py:39
+msgid "Cost price"
+msgstr "Preço de custo"
+
+#: product/models.py:40
+msgid "Cash price"
+msgstr "Preço a vista"
+
+#: product/models.py:41
+msgid "Deferred price"
+msgstr "Preço a prazo"
+
+#: product/models.py:48
+msgid "Product"
+msgstr "Produto"
+
+#: sale/apps.py:7 sale/models.py:24
+msgid "Sale"
+msgstr "Venda"
+
+#: sale/apps.py:8 sale/models.py:25
+msgid "Sales"
+msgstr "Vendas"
+
+#: sale/models.py:13
+msgid "Cash"
+msgstr "A Vista"
+
+#: sale/models.py:15
+msgid "Credit Card"
+msgstr "Cartão de crédito"
+
+#: sale/models.py:16
+msgid "Deferred"
+msgstr "A prazo"
+
+#: sale/models.py:18
+msgid "Sale date"
+msgstr "Data da venda"
+
+#: sale/models.py:20
+msgid "Payment method"
+msgstr "Método de pagamento"
+
+#: sale/models.py:43
+msgid "Sale Product"
+msgstr "Produto de Venda"
+
+#: sale/models.py:44
+msgid "Sale Products"
+msgstr "Produtos de Venda"

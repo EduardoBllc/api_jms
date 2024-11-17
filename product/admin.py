@@ -1,7 +1,12 @@
 from django.contrib import admin
 
-from product.models import Product
+from product.models import Product, Supplier
+
 
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
-    fields = ["description", "purchase_date", "metal"]
+    pass
+
+@admin.register(Supplier)
+class SupplierAdmin(admin.ModelAdmin):
+    pass
