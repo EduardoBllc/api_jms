@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
+from decouple import Csv, config
 import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -23,10 +24,35 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-c^&ri5wssbtd2^j0uti)ip4u1s%z4=vaz3)c0u&1e5=!uiyx!z'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = config('DEBUG', default=False, cast=bool)
+DESENVOLVIMENTO = config('DESENVOLVIMENTO', default=False, cast=bool)
 
-ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com', 'localhost']
+if DESENVOLVIMENTO:
+    ALLOWED_HOSTS = ['*']
 
+    # Database
+    # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
+
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
+
+else:
+    ALLOWED_HOSTS = config('ALLOWED_HOSTS', default=[], cast=Csv())
+
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': config('DB_NAME'),
+            'USER': config('DB_USER'),
+            'PASSWORD': config('DB_PASSWORD'),
+            'HOST': config('DB_HOST', default='localhost'),
+            'PORT': config('DB_PORT', default='5432'),
+        }
+    }
 # Application definition
 
 INSTALLED_APPS = [
@@ -73,16 +99,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'api_jms.wsgi.application'
-
-# Database
-# https://docs.djangoproject.com/en/5.1/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
